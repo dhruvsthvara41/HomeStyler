@@ -1,0 +1,46 @@
+/* Style the Cancel page container */
+.cancel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #ffe6e6;
+  text-align: center;
+}
+
+/* Style the cancel message */
+.cancel-container h1 {
+  font-size: 36px;
+  color: #e60000;
+  margin-bottom: 20px;
+}
+
+/* Style the button */
+.retry-btn {
+  background-color: #e60000;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.retry-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Style the button's link */
+.retry-btn a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Add some margin to the button */
+.retry-btn.mt-3 {
+  margin-top: 30px;
+}

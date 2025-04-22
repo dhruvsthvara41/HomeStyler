@@ -1,0 +1,46 @@
+/* Style the Success page container */
+.success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f0f8ff;
+  text-align: center;
+}
+
+/* Style the success message */
+.success-container h1 {
+  font-size: 36px;
+  /* color: #4caf50; */
+  margin-bottom: 20px;
+}
+
+/* Style the button */
+.buy__btn1 {
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* transition: background-color 0.3s ease; */
+  text-decoration: none;
+  display: inline-block;
+}
+
+.buy__btn:hover {
+  background-color: #45a049;
+}
+
+/* Style the button's link */
+.buy__btn1 a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Add some margin to the button */
+.buy__btn1.mt-3 {
+  margin-top: 10px;
+}
