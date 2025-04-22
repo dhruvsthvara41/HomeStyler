@@ -1,10 +1,14 @@
+require("dotenv").config(); // Add this at the top
+
 const express = require("express");
 const cors = require("cors");
 const Stripe = require("stripe");
 const bodyParser = require("body-parser");
 
 const app = express();
-const stripe = new Stripe("sk_test_51QAPs7Br9cbBKTyg5wh6VBjoGYSCOicjnjRth1NXNCzvsLClkCBNkPOv4ZWv4P16UdUUAVBDiVWO9Gvt5Z3kVvi100h3Y9dwsc"); // Ensure this is correct
+
+// Use key from environment variable
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 app.use(cors({ origin: "http://localhost:3000" }));
 app.use(bodyParser.json());
@@ -17,7 +21,7 @@ app.post("/api/create-checkout-session", async (req, res) => {
       price_data: {
         currency: "usd",
         product_data: { name: product.productName },
-        unit_amount: parseInt(product.price, 10) * 100, // Ensure it's a number in cents
+        unit_amount: parseInt(product.price, 10) * 100,
       },
       quantity: product.quantity,
     }));
